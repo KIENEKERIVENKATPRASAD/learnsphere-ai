@@ -102,3 +102,7 @@ It allows students to interact with learning materials using natural language. T
                     v
              Conversation
                 History
+
+## Deployment
+
+LearnSphere AI is deployed using Vercel.
