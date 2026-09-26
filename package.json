@@ -25,7 +25,7 @@
     "remark-gfm": "^4.0.1",
     "unpdf": "^1.8.1"
   },
-  "devDependencies": {
+   "devDependencies": {
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
     "@types/react": "^19",
@@ -34,5 +34,8 @@
     "eslint-config-next": "16.3.6",
     "tailwindcss": "^4",
     "typescript": "^5"
+  },
+  "allowScripts": {
+    "onnxruntime-node@1.30.0": true
   }
 }
