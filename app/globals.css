@@ -1,0 +1,339 @@
+@import "tailwindcss";
+
+/* =========================================================
+   LearnSphere AI - Global Styles
+   ========================================================= */
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+}
+
+body {
+  background: #030712;
+  color: white;
+}
+
+/* =========================================================
+   AI RESPONSE CONTAINER
+   ========================================================= */
+
+.ai-response {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+
+  color: #e5e7eb;
+
+  font-size: 16px;
+  line-height: 1.75;
+
+  overflow-wrap: anywhere;
+  word-break: normal;
+  white-space: normal;
+}
+
+/* =========================================================
+   HEADINGS
+   ========================================================= */
+
+.ai-response h1 {
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+
+  font-size: 1.6rem;
+  line-height: 1.3;
+  font-weight: 700;
+
+  color: #ffffff;
+}
+
+.ai-response h2 {
+  margin-top: 1.4rem;
+  margin-bottom: 0.65rem;
+
+  font-size: 1.35rem;
+  line-height: 1.35;
+  font-weight: 700;
+
+  color: #ffffff;
+}
+
+.ai-response h3 {
+  margin-top: 1.2rem;
+  margin-bottom: 0.5rem;
+
+  font-size: 1.15rem;
+  line-height: 1.4;
+  font-weight: 650;
+
+  color: #f3f4f6;
+}
+
+/* =========================================================
+   PARAGRAPHS
+   ========================================================= */
+
+.ai-response p {
+  margin-top: 0.65rem;
+  margin-bottom: 0.65rem;
+
+  line-height: 1.75;
+}
+
+/* =========================================================
+   LISTS
+   ========================================================= */
+
+.ai-response ul,
+.ai-response ol {
+  margin-top: 0.65rem;
+  margin-bottom: 0.9rem;
+
+  padding-left: 1.6rem;
+}
+
+.ai-response ul {
+  list-style-type: disc;
+}
+
+.ai-response ol {
+  list-style-type: decimal;
+}
+
+.ai-response li {
+  margin-top: 0.35rem;
+  margin-bottom: 0.35rem;
+
+  padding-left: 0.2rem;
+
+  line-height: 1.7;
+}
+
+.ai-response li > p {
+  margin-top: 0.2rem;
+  margin-bottom: 0.2rem;
+}
+
+/* Nested lists */
+
+.ai-response li ul,
+.ai-response li ol {
+  margin-top: 0.3rem;
+  margin-bottom: 0.3rem;
+}
+
+/* =========================================================
+   BOLD / ITALIC
+   ========================================================= */
+
+.ai-response strong {
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.ai-response em {
+  color: #d1d5db;
+}
+
+/* =========================================================
+   HORIZONTAL LINE
+   ========================================================= */
+
+.ai-response hr {
+  margin: 1.25rem 0;
+
+  border: 0;
+  border-top: 1px solid #374151;
+}
+
+/* =========================================================
+   TABLES
+   ========================================================= */
+
+.ai-response table {
+  width: 100%;
+  max-width: 100%;
+
+  margin: 1rem 0;
+
+  border-collapse: collapse;
+  table-layout: fixed;
+
+  font-size: 0.95rem;
+}
+
+.ai-response thead {
+  background: #1f2937;
+}
+
+.ai-response th {
+  padding: 0.7rem 0.8rem;
+
+  text-align: left;
+  vertical-align: top;
+
+  font-weight: 700;
+  color: #ffffff;
+
+  border: 1px solid #374151;
+
+  overflow-wrap: anywhere;
+}
+
+.ai-response td {
+  padding: 0.65rem 0.8rem;
+
+  vertical-align: top;
+
+  color: #d1d5db;
+
+  border: 1px solid #374151;
+
+  overflow-wrap: anywhere;
+  word-break: normal;
+}
+
+.ai-response tr:nth-child(even) {
+  background: rgba(31, 41, 55, 0.35);
+}
+
+/* =========================================================
+   CODE
+   ========================================================= */
+
+.ai-response code {
+  padding: 0.15rem 0.35rem;
+
+  border-radius: 0.3rem;
+
+  background: #111827;
+  color: #93c5fd;
+
+  font-size: 0.9em;
+
+  overflow-wrap: anywhere;
+}
+
+.ai-response pre {
+  max-width: 100%;
+
+  margin: 1rem 0;
+  padding: 1rem;
+
+  border: 1px solid #374151;
+  border-radius: 0.6rem;
+
+  background: #030712;
+
+  overflow-x: auto;
+
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.ai-response pre code {
+  padding: 0;
+
+  background: transparent;
+  color: #e5e7eb;
+
+  white-space: pre-wrap;
+}
+
+/* =========================================================
+   LINKS
+   ========================================================= */
+
+.ai-response a {
+  color: #60a5fa;
+
+  text-decoration: underline;
+  text-underline-offset: 2px;
+
+  overflow-wrap: anywhere;
+}
+
+.ai-response a:hover {
+  color: #93c5fd;
+}
+
+/* =========================================================
+   BLOCKQUOTES
+   ========================================================= */
+
+.ai-response blockquote {
+  margin: 1rem 0;
+
+  padding: 0.75rem 1rem;
+
+  border-left: 4px solid #3b82f6;
+
+  background: #111827;
+
+  color: #d1d5db;
+}
+
+/* =========================================================
+   IMAGES
+   ========================================================= */
+
+.ai-response img {
+  display: block;
+
+  max-width: 100%;
+  height: auto;
+
+  margin: 1rem auto;
+
+  border-radius: 0.5rem;
+}
+
+/* =========================================================
+   REMOVE EXCESSIVE EMPTY SPACE
+   ========================================================= */
+
+.ai-response > :first-child {
+  margin-top: 0;
+}
+
+.ai-response > :last-child {
+  margin-bottom: 0;
+}
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 640px) {
+  .ai-response {
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  .ai-response h1 {
+    font-size: 1.4rem;
+  }
+
+  .ai-response h2 {
+    font-size: 1.2rem;
+  }
+
+  .ai-response h3 {
+    font-size: 1.05rem;
+  }
+
+  .ai-response table {
+    font-size: 0.85rem;
+  }
+
+  .ai-response th,
+  .ai-response td {
+    padding: 0.5rem;
+  }
+}
