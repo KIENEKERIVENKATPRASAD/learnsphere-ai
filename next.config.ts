@@ -7,6 +7,13 @@ const nextConfig: NextConfig = {
     "@huggingface/transformers",
     "onnxruntime-node",
   ],
+
+  outputFileTracingIncludes: {
+    "/api/upload": [
+      "./node_modules/onnxruntime-node/**/*",
+      "./node_modules/@huggingface/transformers/**/*",
+    ],
+  },
 };
 
 export default nextConfig;

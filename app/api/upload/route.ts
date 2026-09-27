@@ -1,3 +1,4 @@
+export const runtime = "nodejs";
 import { generateEmbedding } from "@/lib/embeddings";
 import { supabase } from "@/lib/supabase";
 import crypto from "crypto";
