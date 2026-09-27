@@ -6,12 +6,14 @@ const nextConfig: NextConfig = {
   serverExternalPackages: [
     "@huggingface/transformers",
     "onnxruntime-node",
+    "onnxruntime-common",
   ],
 
   outputFileTracingIncludes: {
     "/api/upload": [
-      "./node_modules/onnxruntime-node/**/*",
       "./node_modules/@huggingface/transformers/**/*",
+      "./node_modules/onnxruntime-node/**/*",
+      "./node_modules/onnxruntime-common/**/*",
     ],
   },
 };

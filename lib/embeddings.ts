@@ -1,4 +1,8 @@
-import { pipeline, type FeatureExtractionPipeline } from "@huggingface/transformers";
+import "onnxruntime-node";
+import {
+  pipeline,
+  type FeatureExtractionPipeline,
+} from "@huggingface/transformers";
 
 let extractor: FeatureExtractionPipeline | null = null;
 
