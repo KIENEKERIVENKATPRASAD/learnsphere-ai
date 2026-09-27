@@ -1,4 +1,3 @@
-import "onnxruntime-node";
 import {
   pipeline,
   type FeatureExtractionPipeline,
@@ -8,11 +7,15 @@ let extractor: FeatureExtractionPipeline | null = null;
 
 async function getExtractor() {
   if (!extractor) {
-    console.log("Loading embedding model...");
+    console.log("Loading embedding model with WASM...");
 
     extractor = await pipeline(
       "feature-extraction",
-      "Xenova/all-MiniLM-L6-v2"
+      "Xenova/all-MiniLM-L6-v2",
+      {
+        device: "wasm",
+        dtype: "q8",
+      }
     );
 
     console.log("Embedding model loaded.");
