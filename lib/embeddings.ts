@@ -1,36 +1,23 @@
-import {
-  pipeline,
-  type FeatureExtractionPipeline,
-} from "@huggingface/transformers";
+import { InferenceClient } from "@huggingface/inference";
 
-let extractor: FeatureExtractionPipeline | null = null;
+const hf = new InferenceClient(process.env.HF_TOKEN);
 
-async function getExtractor() {
-  if (!extractor) {
-    console.log("Loading embedding model with WASM...");
+const EMBEDDING_MODEL = "BAAI/bge-small-en-v1.5";
 
-    extractor = await pipeline(
-      "feature-extraction",
-      "Xenova/all-MiniLM-L6-v2",
-      {
-        device: "wasm",
-        dtype: "q8",
-      }
-    );
-
-    console.log("Embedding model loaded.");
+export async function generateEmbedding(text: string): Promise<number[]> {
+  if (!process.env.HF_TOKEN) {
+    throw new Error("HF_TOKEN is not configured");
   }
 
-  return extractor;
-}
-
-export async function generateEmbedding(text: string) {
-  const model = await getExtractor();
-
-  const output = await model(text, {
-    pooling: "mean",
+  const result = await hf.featureExtraction({
+    model: EMBEDDING_MODEL,
+    inputs: text,
     normalize: true,
   });
 
-  return Array.from(output.data as Float32Array);
+  if (!Array.isArray(result)) {
+    throw new Error("Invalid embedding response from Hugging Face");
+  }
+
+  return Array.from(result as number[]);
 }

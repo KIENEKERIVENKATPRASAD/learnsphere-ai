@@ -11,7 +11,7 @@
   "dependencies": {
     "@ai-sdk/groq": "^4.0.48",
     "@ai-sdk/react": "^4.0.116",
-    "@huggingface/transformers": "^4.3.0",
+    "@huggingface/inference": "^4.13.30",
     "@supabase/supabase-js": "^2.117.1",
     "ai": "^7.0.113",
     "next": "16.3.6",
